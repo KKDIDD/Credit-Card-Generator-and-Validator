@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <a href="https://ck-card-tools-production.up.railway.app">🌐 Live Demo</a> •
+  <a href="https://ck-card-tools.vercel.app">🌐 Live Demo (Vercel)</a> •
   <a href="#-features">✨ Features</a> •
   <a href="#-installation">📦 Install</a> •
   <a href="#-screenshots">📸 Screenshots</a> •
