@@ -39,36 +39,13 @@ export async function checkBIN(bin) {
 // 格式：卡号|月|年|CVV
 // ------------------------------------------------------------
 export async function validateCard(cardData) {
-  try {
-    const response = await fetch('https://api.chkr.cc/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ data: cardData })
-    });
-    
-    const result = await response.json();
-    
-    // 返回格式：
-    // code: 0=Die, 1=Live, 2=Unknown
-    // status: "Die" | "Live" | "Unknown"
-    // message: 原因
-    // card: 卡片详情
-    return {
-      success: true,
-      code: result.code,
-      status: result.status,
-      message: result.message,
-      card: result.card
-    };
-  } catch (error) {
-    return {
-      success: false,
-      error: error.message,
-      status: 'Unknown'
-    };
-  }
+  // 安全修复：禁止将完整卡号/有效期/CVV发送至未经安全评估的第三方接口（chkr.cc）。
+  // 该接口缺乏数据处理协议、传输加密控制与安全可见性，直接外发会暴露完整支付卡数据。
+  return {
+    success: false,
+    error: 'Card validation via third-party API is disabled: sending full card data (PAN/CVV) to an unvetted external service is not permitted.',
+    status: 'Unknown'
+  };
 }
 
 // ------------------------------------------------------------
