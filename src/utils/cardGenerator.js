@@ -391,6 +391,11 @@ export function generateCardFromBIN(bin, options = {}) {
 // ------------------------------------------------------------
 // 多种输出格式支持（参考namso-gen.com）
 // ------------------------------------------------------------
+// 转义SQL字符串中的单引号，防止SQL注入
+function escapeSqlValue(value) {
+  return String(value).replace(/'/g, "''");
+}
+
 export function formatCardOutput(card, format = 'PIPE') {
   const { cardNumber, expiryMonth, expiryYear, cvv } = card;
   
@@ -419,7 +424,7 @@ export function formatCardOutput(card, format = 'PIPE') {
 </card>`;
     
     case 'SQL':
-      return `INSERT INTO cards (card_number, expiry_month, expiry_year, cvv) VALUES ('${cardNumber}', '${expiryMonth}', '20${expiryYear}', '${cvv}');`;
+      return `INSERT INTO cards (card_number, expiry_month, expiry_year, cvv) VALUES ('${escapeSqlValue(cardNumber)}', '${escapeSqlValue(expiryMonth)}', '20${escapeSqlValue(expiryYear)}', '${escapeSqlValue(cvv)}');`;
     
     case 'CARD':
     default:
